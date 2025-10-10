@@ -144,7 +144,7 @@ To label the transcript with speaker ID's (set number of speakers if known e.g. 
 
 To run on CPU instead of GPU (and for running on Mac OS X):
 
-    whisperx path/to/audio.wav --compute_type int8
+    whisperx path/to/audio.wav --compute_type int8 --device cpu
 
 ### Other languages
 
@@ -166,6 +166,7 @@ See more examples in other languages [here](EXAMPLES.md).
 ```python
 import whisperx
 import gc
+from whisperx.diarize import DiarizationPipeline
 
 device = "cuda"
 audio_file = "audio.mp3"
@@ -196,7 +197,7 @@ print(result["segments"]) # after alignment
 # import gc; import torch; gc.collect(); torch.cuda.empty_cache(); del model_a
 
 # 3. Assign speaker labels
-diarize_model = whisperx.diarize.DiarizationPipeline(use_auth_token=YOUR_HF_TOKEN, device=device)
+diarize_model = DiarizationPipeline(use_auth_token=YOUR_HF_TOKEN, device=device)
 
 # add min/max number of speakers if known
 diarize_segments = diarize_model(audio)
