@@ -169,3 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+Call_Recordings/
+batch_transcribe.ps1
+sample_commands.md
+.gitignore
+README_BATCH_SCRIPT.md
