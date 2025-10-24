@@ -170,6 +170,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 Call_Recordings/
+speed_test_v2.ps1
+speed_test.ps1
+batch_transcribe.ps1
 *.ps1
 sample_commands.md
 .gitignore
