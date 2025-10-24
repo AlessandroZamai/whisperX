@@ -59,6 +59,7 @@ class TranscriptionResult(TypedDict):
     """
     segments: List[SingleSegment]
     language: str
+    word_segments: Optional[List[SingleWordSegment]]
 
 
 class AlignedTranscriptionResult(TypedDict):
@@ -67,3 +68,4 @@ class AlignedTranscriptionResult(TypedDict):
     """
     segments: List[SingleAlignedSegment]
     word_segments: List[SingleWordSegment]
+    language: str

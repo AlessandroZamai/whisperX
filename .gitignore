@@ -174,3 +174,8 @@ batch_transcribe.ps1
 sample_commands.md
 .gitignore
 README_BATCH_SCRIPT.md
+*.json
+*.srt
+*.tsv
+*.txt
+*.vtt

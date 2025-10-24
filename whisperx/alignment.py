@@ -385,7 +385,7 @@ def align(
     for segment in aligned_segments:
         word_segments += segment["words"]
 
-    return {"segments": aligned_segments, "word_segments": word_segments}
+    return {"segments": aligned_segments, "word_segments": word_segments, "language": model_lang}
 
 """
 source: https://pytorch.org/tutorials/intermediate/forced_alignment_with_torchaudio_tutorial.html

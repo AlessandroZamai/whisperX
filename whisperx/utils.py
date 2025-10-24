@@ -428,7 +428,15 @@ class WriteJSON(ResultWriter):
     extension: str = "json"
 
     def write_result(self, result: dict, file: TextIO, options: dict):
-        json.dump(result, file, ensure_ascii=False)
+        # Reorder dictionary to put language at the end
+        ordered_result = {}
+        for key in result:
+            if key != "language":
+                ordered_result[key] = result[key]
+        # Add language at the end if it exists
+        if "language" in result:
+            ordered_result["language"] = result["language"]
+        json.dump(ordered_result, file, ensure_ascii=False)
 
 
 def get_writer(
