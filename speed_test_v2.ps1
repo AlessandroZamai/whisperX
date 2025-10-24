@@ -3,7 +3,7 @@
 
 $testFile = "C:\Users\T888918\Downloads\drive-download-20251008T175910Z-1-001\Consolidated Call Recordings\20250911_1853_2066945490024.mp3"
 $outputFolder = "C:\Users\T888918\Downloads\drive-download-20251008T175910Z-1-001\Consolidated Call Recordings\Transcripts"
-$hfToken = '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'
+$hfToken = ''
 $model = 'turbo'
 
 Write-Host "========================================" -ForegroundColor Cyan
